@@ -2,7 +2,16 @@ pipeline {
     agent any  // Defines the environment where the pipeline runs
 
     stages {
-        stage('Build') {  // Stage for building your project
+
+stage('clone') {  // Stage for building your project
+            steps {
+                // echo 'Building the project...'
+                sh ''
+                // Add build commands here (e.g., mvn, npm, etc.)
+            }
+        }
+                
+stage('Build') {  // Stage for building your project
             steps {
                 echo 'Building the project...'
                 sh 'javac HelloWold.java'
